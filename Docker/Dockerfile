@@ -20,15 +20,16 @@ RUN apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 573BFD6B3D8FBC64107
 						nginx-module-njs \
 						gettext-base
 
-RUN apt-get install --no-install-recommends --no-install-suggests -y \
-						python \
-						curl
+# RUN apt-get install --no-install-recommends --no-install-suggests -y \
+# 						python \
+#						curl
+
 RUN rm -rf /var/lib/apt/lists/*
 
-# Install Lektor CMS
-RUN /usr/bin/curl -sf https://www.getlektor.com/install.sh | \
-	sed '/stdin/d;s/input = .*/return/' | \
-	/bin/sh
+# Install Lektor CMS -- not needed (done on an instrumental host, not on Web server itself)
+# RUN /usr/bin/curl -sf https://www.getlektor.com/install.sh | \
+#	sed '/stdin/d;s/input = .*/return/' | \
+#	/bin/sh
 
 # forward request and error logs to docker log collector
 RUN ln -sf /dev/stdout /var/log/nginx/access.log \

@@ -1,14 +1,14 @@
 <!doctype html>
 <meta charset="utf-8">
 <link rel="stylesheet" href="{{ '/static/style.css'|url }}">
-<title>{% block title %}Добро пожаловать{% endblock %} — Сайт ЧОУ СОШ "София" г. Пермь</title>
+<title>{% block title %}Добро пожаловать{% endblock %} — Сайт ЧОУ СОШ «София» г. Пермь</title>
 <body>
   <header>
-    <h1>Сайт ЧОУ СОШ "София" г. Пермь</h1>
+    <h1>Сайт ЧОУ СОШ «София» г. Пермь</h1>
     <nav>
       <ul class="nav navbar-nav">
         <li{% if this._path == '/' %} class="active"{% endif
-          %}><a href="{{ '/'|url }}">Welcome</a></li>
+          %}><a href="{{ '/'|url }}">Главная</a></li>
         {% for href, title in [
           ['/news', 'Новости'],
           ['/Teachers', 'Учителя'],
@@ -25,6 +25,6 @@
     {% block body %}{% endblock %}
   </div>
   <footer>
-    &copy; Copyright 2017 by ЧОУ СОШ "София".
+    &copy; Copyright 2017 by ЧОУ СОШ «София».
   </footer>
 </body>

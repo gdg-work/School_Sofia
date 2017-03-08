@@ -5,16 +5,24 @@
   {% else %}
     <h2>{{ post.title }}</h2>
   {% endif %}
-  <p class="meta">
-    written by
+
+  <div class="blog-body">
+  {{ post.body }}
+  </div>
+
+  {% for image in post.attachments.images %}
+  <div class="image"><a href="{{image|url}}">"<img src="{{ image.thumbnail(640)|url }}"></a></div>
+  {% endfor %}
+
+  <div class="blog-author">
+    Автор: 
     {% if post.twitter_handle %}
       <a href="https://twitter.com/{{ post.twitter_handle
         }}">{{ post.author or post.twitter_handle }}</a>
     {% else %}
       {{ post.author }}
     {% endif %}
-    on {{ post.pub_date }}
+  </div>
   </p>
-  {{ post.body }}
   </div>
 {% endmacro %}

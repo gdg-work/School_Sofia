@@ -1,0 +1,109 @@
+_model: html_document
+---
+title: Таблица с данными учителей школы «София»
+---
+body: 
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<table>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 15%" />
+<col style="width: 11%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 25%" align="right" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Фамилия, имя, отчество</th>
+<th>Специальность</th>
+<th>Категория</th>
+<th>Пед. стаж</th>
+<th>Общий стаж</th>
+<th>Год прохождения курсов</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Небогатикова Ольга Григорьевна</td>
+<td>учитель начальных классов</td>
+<td>высшая</td>
+<td>31</td>
+<td>37</td>
+<td>2015</td>
+</tr>
+<tr class="even">
+<td>Черемных Нина Фёдоровна</td>
+<td>русский язык и литература</td>
+<td>первая</td>
+<td>32</td>
+<td>32</td>
+<td>2015</td>
+</tr>
+<tr class="even">
+<td>Пурмалис Ирина Владимировна</td>
+<td>английский язык</td>
+<td>первая</td>
+<td>33</td>
+<td>38</td>
+<td>2015</td>
+</tr>
+<tr class="even">
+<td>Куликова Лариса Геннадьевна</td>
+<td>география, краеведение</td>
+<td>высшая</td>
+<td>30</td>
+<td>30</td>
+<td>2015</td>
+</tr>
+<tr class="even">
+<td>Безматерных Нина Лукояновна</td>
+<td>русский язык, литература</td>
+<td>высшая</td>
+<td>35</td>
+<td>36</td>
+<td>2015</td>
+</tr>
+<tr class="even">
+<td>Калина Лариса Алексеевна</td>
+<td>история, обществознание</td>
+<td>первая</td>
+<td>21</td>
+<td>28</td>
+<td>2016</td>
+</tr>
+<tr class="even">
+<td>Заболотских Татьяна Фёдоровна</td>
+<td>математика</td>
+<td>первая</td>
+<td>40</td>
+<td>44</td>
+<td>2015</td>
+</tr>
+<!--
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+-->
+</tbody>
+</table>
+</body>
+</html>

@@ -4,14 +4,16 @@
 <title>{% block title %}Добро пожаловать{% endblock %} — Сайт ЧОУ СОШ «София» г. Пермь</title>
 <body>
   <header>
-    <h1>Сайт ЧОУ СОШ «София» г. Пермь</h1>
+    <div class="image" align="left" width="120px"><img src="/static/sofia-emblem.svg" alt="Эмблема школы"/></div>
+    <h1>ЧОУ СОШ «София» г. Пермь</h1>
     <nav>
       <ul class="nav navbar-nav">
         <li{% if this._path == '/' %} class="active"{% endif
           %}><a href="{{ '/'|url }}">Главная</a></li>
         {% for href, title in [
           ['/news', 'Новости'],
-          ['/Teachers', 'Учителя'],
+          ['/history', 'История'],
+          ['/teachers', 'Учителя'],
           ['/projects', 'Проекты'],
           ['/about', 'О школе']
         ] %}
@@ -25,6 +27,6 @@
     {% block body %}{% endblock %}
   </div>
   <footer>
-    &copy; Copyright 2017 by ЧОУ СОШ «София».
+    &copy; Copyright 2017 by ЧОУ СОШ «София».  Просим при перепечатке ставить активную ссылку на копируемый материал.
   </footer>
 </body>

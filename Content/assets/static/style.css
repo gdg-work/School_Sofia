@@ -32,23 +32,29 @@ a:hover {
 }
 
 /* page header ("Шапка") */
-.logo .header-nav {padding: 10px; vertical-align: bottom;}
+.logo .header-nav {padding: 10px;}
 .container {
   background-image: url("/static/v-gradient_cyanblue.jpg");
-  height: 150px;
-  vertical-align: bottom;
+  height: 150px; overflow: hidden;
 }
 
 .logo {
-  width: 27%; align: right; float: right; overflow: hidden;
+  width: 20%; align: right; float: right;
 }
 
 .sitetitle {
   font-weight: bold; font-size: 36px; float: initial;
 }
 
-.header-nav a { color: black; }
-.header-nav a:hover { color: maroon; }
+.header-nav {padding-top: 20px;}
+.header-nav a {
+  color: navy; display: inline-block; background: #e5e3e2;
+  padding: 9px; border: 1px; border-color: #050302;
+}
+.header-nav a:hover {
+  color: maroon; display: inline-block; background: #c5e4c2;
+  padding: 9px; border: 1px; border-color: maroon;
+}
 
 /* section headers */
 header h1 {

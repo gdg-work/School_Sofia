@@ -5,13 +5,13 @@
 <body>
   <header>
     <div class="container">
-      <div class="logo" ><img src="/static/sofia-emblem.svg" alt="Эмблема школы" width="200px"/></div>
+      <div class="logo" ><img src="/static/sofia-emblem.svg" alt="Эмблема школы" width="100%"/></div>
       <div class="header-nav">
         <div class="sitetitle">ЧОУ СОШ «София»</div>
       <nav>
 	<ul class="nav navbar-nav">
-	  <li{% if this._path == '/' %} class="active"{% endif
-	    %}><a href="{{ '/'|url }}">Главная</a></li>
+	  <li{% if this._path == '/' %} class="active"{% endif %}>
+      <a href="{{ '/'|url }}">Главная</a></li>
 	  {% for href, title in [
 	    ['/news', 'Новости'],
 	    ['/history', 'История'],

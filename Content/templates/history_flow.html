@@ -1,7 +1,8 @@
-{% extends "layout.html" %}
-{% from 'macros/blocksupport.html' import render_full_width_blocks %}
+{% extends "page.html" %}
 {% block title %}{{ this.title }}{% endblock %}
-{% block bodyclass %}history_flow{% endblock %}
-{% block outerbody %}
-  {{ render_full_width_blocks(this.body.blocks, classes='col-md-12') }}
-{% endblock %}
+
+{% for blk in this.body.flow_blocks %}
+  <div class="block block-{{ blk._flowblock }}">
+    {{ blk }}
+  </div>
+{% endfor %}

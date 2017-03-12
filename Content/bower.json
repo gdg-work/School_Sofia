@@ -1,0 +1,25 @@
+{
+  "name": "School_Sofia_Site",
+  "homepage": "sofia-perm-1.netlify.com",
+  "authors": [
+    "Dmitriy Golub <gdg.work@gmail.com>"
+  ],
+  "description": "A site for 'sofia' school",
+  "main": "Contents/content/contents.lr",
+  "keywords": [
+    "lektor",
+    "site",
+    "static",
+    "sofia",
+    "school"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2",
+    "lightbox2": "^2.9.0"
+  },
+  "resolutions": {
+    "jquery": "~2"
+  }
+}

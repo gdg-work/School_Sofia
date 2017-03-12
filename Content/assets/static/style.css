@@ -15,16 +15,17 @@ a:hover {
 /* Adaptation for different devices/screen widths */
 @media screen and (min-width 900px) {
 	header, footer, div.page {
-	    width: 900px;
+	    width: 70%;
 	    margin: 0 auto;
 	    background: #daeef3;
 	    padding: 20px 30px;
+	    float:left
 	}
 }
 
 @media screen and (max-width 900px) {
 	header, footer, div.page {
-	    width: 90%;
+	    width: 95%;
 	    margin: 0 auto;
 	    background: #daeef3;
 	    padding: 20px 30px;
@@ -35,7 +36,7 @@ a:hover {
 .logo .header-nav {padding: 10px;}
 .container {
   background-image: url("/static/v-gradient_cyanblue.jpg");
-  height: 150px; overflow: hidden;
+  height: 150px; overflow: visible;
 }
 
 .logo {

@@ -11,32 +11,44 @@ a:hover {
     color: #33bbdf;
 }
 
-
-/* Adaptation for different devices/screen widths */
-@media screen and (min-width 900px) {
-	header, footer, div.page {
-	    width: 900px;
-	    margin: 0 auto;
-	    background: #daeef3;
-	    padding: 20px 30px;
-	}
+/* -------- Width ------ */
+header, footer, div.page {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #daeef3;
 }
 
-@media screen and (max-width 900px) {
-	header, footer, div.page {
-	    width: 90%;
-	    margin: 0 auto;
-	    background: #daeef3;
-	    padding: 20px 30px;
-	}
+header {padding: 2px 0px; width: 100% }
+div.page, footer {padding: 20px 30px; width: 95%}
+
+/* page header ("Шапка") */
+.logo .header-nav {padding: 10px;}
+.container {
+  background-image: url("/static/v-gradient_cyanblue.jpg");
+  height: 150px; overflow: visible;
+}
+
+.logo {
+  width: 20%; align: right; float: right;
+}
+
+.sitetitle {
+  font-weight: bold; font-size: 36px; float: initial;
+}
+
+.header-nav {padding-top: 20px; padding-left: 10px;}
+.header-nav a {
+  color: navy; display: inline-block; background: #e5e3e2;
+  padding: 9px; border: 1px; border-color: #050302;
+}
+.header-nav a:hover {
+  color: maroon; display: inline-block; background: #c5e4c2;
+  padding: 9px; border: 1px; border-color: maroon;
 }
 
 /* section headers */
 header h1 {
-    color: #169bbd;
-    margin: 0;
-    font-weight: normal;
-    font-size: 32px;
+    color: #169bbd; margin: 0; font-weight: normal; font-size: 32px;
 }
 
 header h2 {

@@ -1,32 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <meta charset="utf-8">
 <link rel="stylesheet" href="{{ '/static/style.css'|url }}">
 <title>{% block title %}Добро пожаловать{% endblock %} — Сайт ЧОУ СОШ «София» г. Пермь</title>
 <body>
   <header>
-    <div class="image" align="left" width="120px"><img src="/static/sofia-emblem.svg" alt="Эмблема школы"/></div>
-    <h1>ЧОУ СОШ «София» г. Пермь</h1>
-    <nav>
-      <ul class="nav navbar-nav">
-        <li{% if this._path == '/' %} class="active"{% endif
-          %}><a href="{{ '/'|url }}">Главная</a></li>
-        {% for href, title in [
-          ['/news', 'Новости'],
-          ['/history', 'История'],
-          ['/teachers', 'Учителя'],
-          ['/projects', 'Проекты'],
-          ['/about', 'О школе']
-        ] %}
-          <li{% if this.is_child_of(href) %} class="active"{% endif
-            %}><a href="{{ href|url }}">{{ title }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
+    <div class="container">
+      <div class="logo" ><img src="/static/sofia-emblem.svg" alt="Эмблема школы" width="100%"/></div>
+      <div class="header-nav">
+        <div class="sitetitle">ЧОУ СОШ «София»</div>
+      <nav>
+	<ul class="nav navbar-nav">
+	  <li{% if this._path == '/' %} class="active"{% endif %}>
+      <a href="{{ '/'|url }}">Главная</a></li>
+	  {% for href, title in [
+	    ['/news', 'Новости'],
+	    ['/history', 'История'],
+	    ['/teachers', 'Учителя'],
+	    ['/projects', 'Проекты'],
+	    ['/about', 'О школе'],
+	    ['/doshkolniky', 'Дошкольникам']
+	  ] %}
+	    <li{% if this.is_child_of(href) %} class="active"{% endif
+	      %}><a href="{{ href|url }}">{{ title }}</a></li>
+	  {% endfor %}
+	</ul>
+      </nav>
+      </div>
+    </header>
   </header>
   <div class="page">
     {% block body %}{% endblock %}
   </div>
   <footer>
-    &copy; Copyright 2017 by ЧОУ СОШ «София».  Просим при перепечатке ставить активную ссылку на копируемый материал.
+    &copy; 2017 ЧОУ СОШ «София».  Просим при перепечатке указывать ссылку на копируемый материал.
   </footer>
 </body>
+<!-- 
+vim:shiftwidth=2:expandtab:softtabstop=2:ts=2
+-->

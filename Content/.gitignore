@@ -1,2 +1,4 @@
 go.sh
-build
+\.netlify
+build/\.lektor
+build/[a-zA-Z]*

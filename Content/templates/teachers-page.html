@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+  {% set pages = site.query('/teachers').all() %}
+  <header>
+    <h1>{{ this.title }}</h1>
+    <nav>
+      <ol>
+        {% for page in pages %}
+        <li><a href="#{{ page._id }}">{{ page.title }}</a></li>
+        {% endfor %}
+      </ol>
+    </nav>
+  </header>
+  <p>
+    Учитель нашей школы отличается целостным мышлением, высоким уровнем
+    компетентности, знанием и практическим применением методик
+    личностно-ориентированного обучения, пониманием места частного
+    образования в стране.
+  </p>
+  <p>
+    Все учителя школы имеют высшее образование.
+  </p>
+  <p>
+    Распределение учителей по категориям: первая категория&nbsp;— 50%,  высшая категория&nbsp;— 40%, кандидат педагогических наук&nbsp;— 10%
+  </p>
+
+  {% for page in pages %}
+    <div class="section" id="{{ page._id }}">
+      <h3>{{ page.title }}</h3>
+        <div class="teacher_image" class="image">
+          <a href="{{ page.photo|url }}"><img src="{{ page.photo.thumbnail(200)|url }}" alt="{{ page.title }}"/></a>
+        </div>
+      {{ page.body }}
+    </div>
+  {% endfor %}
+{% endblock %}

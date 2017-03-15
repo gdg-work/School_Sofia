@@ -1,10 +1,12 @@
-_model: page
+_model: singlepage-page
 ---
 title: Безматерных Нина Лукояновна,  преподаватель русского языка и литературы
 ---
+photo: n_l_bezmaternyh.jpg
+---
 body:
 
-![Нина Лукояновна](n_l_bezmaternyh.jpg)
+<!-- ![Нина Лукояновна](n_l_bezmaternyh.jpg) -->
 
 Нина Лукояновна — учитель с 35-летним педагогическим стажем.
 

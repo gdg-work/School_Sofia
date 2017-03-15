@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+  {% set pages = site.query('/teachers2').all() %}
+  <header>
+    <h1>{{ this.title }}</h1>
+    <nav>
+      <ul>
+        {% for page in pages %}
+        <li><a href="#{{ page._id }}">{{ page.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </header>
+  {% for page in pages %}
+    <div class="section" id="{{ page._id }}">
+      <h1>{{ page.title }}</h1>
+      {{ page.body }}
+    </div>
+  {% endfor %}
+{% endblock %}

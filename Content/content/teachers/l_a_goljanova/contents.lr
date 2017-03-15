@@ -1,5 +1,9 @@
-_model: page
+_model: singlepage-page
+---
+photo: l_a_goljanova.jpg
 ---
 title: Гольянова Людмила Александровна — учитель физики
 ---
-body: ![Людмила Александровна](l_a_goljanova.jpg)
+body: 
+
+<!-- ![Людмила Александровна](l_a_goljanova.jpg) -->

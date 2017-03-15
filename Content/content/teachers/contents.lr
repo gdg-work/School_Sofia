@@ -1,3 +1,5 @@
-_model: singlepage-index
+_model: teachers-index
+---
+_template: teachers-index.html
 ---
 title: Наши учителя

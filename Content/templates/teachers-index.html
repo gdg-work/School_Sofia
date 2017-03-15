@@ -7,7 +7,7 @@
     <nav>
       <ol>
         {% for page in pages %}
-        <li><a href="#{{ page._id }}">{{ page.title }}</a></li>
+	<li><a href="#{{ page._id }}">{{ page.name }}&nbsp;— {{ page.title }}</a></li>
         {% endfor %}
       </ol>
     </nav>
@@ -22,15 +22,19 @@
     Все учителя школы имеют высшее образование.
   </p>
   <p>
-    Распределение учителей по категориям: первая категория&nbsp;— 50%,  высшая категория&nbsp;— 40%, кандидат педагогических наук&nbsp;— 10%
+    Распределение учителей по категориям: первая категория&nbsp;— 50%,  высшая
+    категория&nbsp;— 40%, кандидат педагогических наук&nbsp;— 10%.
   </p>
 
   {% for page in pages %}
     <div class="section" id="{{ page._id }}">
-      <h3>{{ page.title }}</h3>
-        <div class="teacher_image" class="image">
-          <a href="{{ page.photo|url }}"><img src="{{ page.photo.thumbnail(200)|url }}" alt="{{ page.title }}"/></a>
+      <h3 class="teacher">{{ page.name }}</h3>
+        {% set image = page.attachments.images.first() %}
+	{% if image %}
+        <div class="image">
+          <a href="{{ image|url }}"><img src="{{ image.thumbnail(200)|url }}" alt="{{ page.title }}"/></a>
         </div>
+	{% endif %}
       {{ page.body }}
     </div>
   {% endfor %}

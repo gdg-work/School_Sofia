@@ -1,9 +1,16 @@
-_model: singlepage-page
+_model: teachers-person
 ---
-photo: l_a_goljanova.jpg
+name: Гольянова Людмила Александровна
 ---
-title: Гольянова Людмила Александровна — учитель физики
+title: учитель физики
 ---
-body: 
+category: первая
+---
+stage: 42
+---
+pedstage: 22
+---
+courses: 2013
+---
+body:
 
-<!-- ![Людмила Александровна](l_a_goljanova.jpg) -->

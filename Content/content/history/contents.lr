@@ -34,22 +34,7 @@ text:
 частное общеобразовательное учреждение «Средняя общеобразовательная школа „София“».
 ----
 class: default
-#### slideshow ####
-slides:
-
-##### slide #####
-description: 
------
-image: h1.jpg
-
-##### slide #####
-description: 
------
-image: h2.jpg
-
-##### slide #####
-description: 
------
-image: h3.jpg
----
-_discoverable: yes
+#### text-block ####
+text: ![Фото 1](h1.jpg)  ![Фото 2](h2.jpg) ![Фото 3](h3.jpg)
+----
+class: centered

@@ -7,7 +7,7 @@
     <nav>
       <ol>
         {% for page in pages %}
-	<li><a href="#{{ page._id }}">{{ page.name }}&nbsp;— {{ page.title }}</a></li>
+        <li><a href="#{{ page._id }}">{{ page.name }}</a>&nbsp;— {{ page.title }};</li>
         {% endfor %}
       </ol>
     </nav>
@@ -29,12 +29,22 @@
   {% for page in pages %}
     <div class="section" id="{{ page._id }}">
       <h3 class="teacher">{{ page.name }}</h3>
-        {% set image = page.attachments.images.first() %}
-	{% if image %}
-        <div class="image">
-          <a href="{{ image|url }}"><img src="{{ image.thumbnail(200)|url }}" alt="{{ page.title }}"/></a>
-        </div>
-	{% endif %}
+      {% set image = page.attachments.images.first() %}
+      {% if image %}
+      <div class="image teacher_photo">
+        <a href="{{ image|url }}"><img src="{{ image.thumbnail(200)|url }}" alt="{{ page.title }}"/></a>
+      </div>
+      {% endif %}
+      {% if page.category %}
+      <div class="list teacher_info">
+        <ul>
+          <li>Категория: {{ page.category }};</li>
+          <li>Общий стаж: {{ page.stage }};</li>
+          <li>Педагогический стаж: {{page.pedstage}};</li>
+          <li>Курсы повышения квалификации: {{page.courses}}.
+        </ul>
+      </div>
+      {% endif %}
       {{ page.body }}
     </div>
   {% endfor %}

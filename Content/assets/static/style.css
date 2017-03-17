@@ -79,9 +79,10 @@ header nav ul {
 }
 
 /* teachers page: photo of a teacher flows to the left */
-.teacher_photo { float: left, display: inline-block;  width: 10%, align=center; }
-.teacher_info { align=left; }
 
+.teacher.section {display:block; padding: 5px; overflow: hidden; border-top: 1px solid black;}
+.teacher_photo { float: left; display: inline-block; width: 20%, align:center; overflow:hide; padding: 5px;}
+.teacher_info { display:block; align=left; padding-left:20%; }
 
 header nav ul li {
     display: inline;
@@ -92,3 +93,7 @@ header nav ul li {
 div.page {
     background: #f1fbfe;
 }
+
+/* 
+vim:shiftwidth=4:expandtab:ts=4:softtabstop=4
+ */

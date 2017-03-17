@@ -27,26 +27,30 @@
   </p>
 
   {% for page in pages %}
-    <div class="section" id="{{ page._id }}">
-      <h3 class="teacher">{{ page.name }}</h3>
+    <div class="section teacher" id="{{ page._id }}">
       {% set image = page.attachments.images.first() %}
       {% if image %}
-      <div class="image teacher_photo">
-        <a href="{{ image|url }}"><img src="{{ image.thumbnail(200)|url }}" alt="{{ page.title }}"/></a>
+      <div class="teacher_photo">
+	<div class="image">
+	  <a href="{{ image|url }}"><img src="{{ image.thumbnail(150)|url }}" alt="{{ page.title }}"/></a>
+	</div>
       </div>
       {% endif %}
-      {% if page.category %}
-      <div class="list teacher_info">
-        <p>{{page.title}}</p>
-        <ul>
-          <li>Категория: {{ page.category }};</li>
-          <li>Общий стаж: {{ page.stage }};</li>
-          <li>Педагогический стаж: {{page.pedstage}};</li>
-          <li>Курсы повышения квалификации: {{page.courses}}.
-        </ul>
+      <h3 class="teacher">{{ page.name }}</h3>
+      <div class="teacher_info">
+	{% if page.title %}<p>{{page.title}}</p>{% endif %}
+	<div class="list">
+	  <ul>
+	    {% if page.category %}<li>Категория: {{ page.category }}</li>{% endif %}
+	    {% if page.stage %}<li>Общий стаж: {{ page.stage }}</li>{% endif %}
+	    {% if page.pedstage %}<li>Педагогический стаж: {{page.pedstage}}</li>{% endif %}
+	    {% if page.courses %}<li>Курсы повышения квалификации: {{page.courses}}{% endif %}
+	  </ul>
+	</div>
+        {{ page.body }}
       </div>
-      {% endif %}
-      {{ page.body }}
     </div>
   {% endfor %}
 {% endblock %}
+
+{# vim:shiftwidth=2:expandtab:ts=2:softtabstop=2 #}

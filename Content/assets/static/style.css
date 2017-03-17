@@ -94,6 +94,11 @@ div.page {
     background: #f1fbfe;
 }
 
+/* image in a paragraph (in text) */
+p img {
+    display: inline-block; padding: 5px;
+}
+
 /* 
 vim:shiftwidth=4:expandtab:ts=4:softtabstop=4
  */

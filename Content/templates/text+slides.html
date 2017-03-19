@@ -1,0 +1,9 @@
+{% extends "page.html" %}
+{% from 'macros/blocksupport.html' import render_full_width_blocks %}
+{% block title %}{{ this.title }}{% endblock %}
+{# --- test 1 --- #}
+{% for blk in this.body.flow_blocks %}
+  <div class="block block-{{ blk._flowblock }}">
+    {{ blk }}
+  </div>
+{% endfor %}

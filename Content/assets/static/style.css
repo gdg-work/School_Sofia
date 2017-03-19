@@ -24,9 +24,10 @@ header {padding: 0px 0px;}
 
 /* page header ("Шапка") */
 .logo .header-nav {padding: 10px;}
-.container {
+header .container {
   background: url("/static/v-gradient_cyanblue.jpg") repeat-x ;
-  height: 8em; overflow: visible;
+  background-size: contain;
+  height: 11em; overflow: visible;
 }
 
 .logo {
@@ -34,12 +35,12 @@ header {padding: 0px 0px;}
 }
 
 .sitetitle {
-  font-weight: bold; font-size: 36px; float: initial;
+  font-weight: bold; color:white; font-size: 36px; float: initial;
 }
 
 .header-nav {padding-top: 20px; padding-left: 10px;}
 .header-nav a {
-  color: navy; display: inline-block; background: #e5e3e2;
+  color: navy; display: inline-block; 
   padding: 9px; border: 1px; border-color: #050302;
 }
 .header-nav a:hover {
@@ -93,6 +94,25 @@ header nav ul li {
 div.page {
     background: #f1fbfe;
 }
+
+/* contacts page: font size, color of different lines */
+.contacts {display: block; font-size: 25px; vertical-align: middle;}
+.contacts .address-line {background: #FDF9D5;}
+.contacts .fax-line {background: #FDF9D5;}
+
+/*
+ * SLIDE SHOW
+ * lektor makes slideshows as a sequence of 'slide' elements, one of which has 'active' flag set
+ */
+.slideshow-wrapper {}
+.slideshow {}
+.slideshow-inner {}
+.carousel.slide {}
+.carousel-indicator {}
+.carousel-inner {}
+
+.slideshow {display:block;}
+.slide {display: inline-block; border: solid 2px white; margin: 10px}
 
 /* 
 vim:shiftwidth=4:expandtab:ts=4:softtabstop=4

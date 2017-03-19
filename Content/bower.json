@@ -20,6 +20,6 @@
     "lightbox2": "^2.9.0"
   },
   "resolutions": {
-    "jquery": "~2"
+    "jquery": "^3.2.0"
   }
 }

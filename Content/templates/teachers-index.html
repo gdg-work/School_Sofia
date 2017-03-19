@@ -31,9 +31,9 @@
       {% set image = page.attachments.images.first() %}
       {% if image %}
       <div class="teacher_photo">
-	<div class="image">
-	  <a href="{{ image|url }}"><img src="{{ image.thumbnail(150)|url }}" alt="{{ page.title }}"/></a>
-	</div>
+        <div class="image">
+          <a href="{{ image|url }}"><img src="{{ image.thumbnail(150)|url }}" alt="{{ page.title }}"/></a>
+        </div>
       </div>
       {% endif %}
       <h3 class="teacher">{{ page.name }}</h3>
@@ -53,4 +53,6 @@
   {% endfor %}
 {% endblock %}
 
-{# vim:shiftwidth=2:expandtab:ts=2:softtabstop=2 #}
+{#
+vim:shiftwidth=2:expandtab:ts=2:softtabstop=2
+#}

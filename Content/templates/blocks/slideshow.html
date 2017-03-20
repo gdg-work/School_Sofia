@@ -1,12 +1,20 @@
-{% set carousel_id = 'carousel-' ~ get_random_id() %}
+{% set carousel_id = 'lbox2-' ~ get_random_id() %}
 <div class="slideshow-wrapper">
   <div class="slideshow">
   {% for slide in this.slides.blocks %}
     <div class="slide">
-      {% set image = slide.image %}
-      <a href="{{ image|url }}" data-lightbox="{{ carousel_id }}" data-title="{{ slide.description }}">
-        <img width="100" src="{{ image|url }}" alt="{{ slide.description }}"/>
-      </a>
+      {% set imgname = slide.image %}
+      {% for image in record.attachments.images.all() %}
+        {% if image|url == imgname %}
+          <a href="{{ imgname }}" data-lightbox="{{ carousel_id }}" data-title="{{ slide.description }}">
+            <img src="{{ image.thumbnail(150)|url }}" alt="{{ slide.description }}"/>
+          </a>
+        {% else %}
+          <!--
+            skipped: imgurl {{imgname.url}} != image {{ image|url }}
+          -->
+        {% endif %}
+      {% endfor %}
     </div>
   {% endfor %}
   </div>

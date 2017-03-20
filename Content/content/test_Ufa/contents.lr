@@ -28,16 +28,27 @@ class: default
 
 #### slideshow ####
 slides:
-
 ##### slide #####
 description: 1
 -----
-image: Ufa_gruppa.JPG
+image: 002.jpg
 ##### slide #####
 description: 2
 -----
-image: Ufa_monument_Danil.JPG
+image: 006.jpg
 ##### slide #####
 description: 3
 -----
-image: Ufa_Nikita.JPG 
+image: 013.jpg
+##### slide #####
+description: 4
+-----
+image: 014.jpg
+##### slide #####
+description: 5
+-----
+image: 015.jpg
+##### slide #####
+description: 6
+-----
+image: 022.jpg

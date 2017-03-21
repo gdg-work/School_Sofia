@@ -38,15 +38,15 @@
       {% endif %}
       <h3 class="teacher">{{ page.name }}</h3>
       <div class="teacher_info">
-	{% if page.title %}<p>{{page.title}}</p>{% endif %}
-	<div class="list">
-	  <ul>
-	    {% if page.category %}<li>Категория: {{ page.category }}</li>{% endif %}
-	    {% if page.stage %}<li>Общий стаж: {{ page.stage }}</li>{% endif %}
-	    {% if page.pedstage %}<li>Педагогический стаж: {{page.pedstage}}</li>{% endif %}
-	    {% if page.courses %}<li>Курсы повышения квалификации: {{page.courses}}{% endif %}
-	  </ul>
-	</div>
+        {% if page.title %}<p>{{page.title}}</p>{% endif %}
+        <div class="list">
+          <ul>
+            {% if page.category %}<li>Категория: {{ page.category }}</li>{% endif %}
+            {% if page.stage %}<li>Общий стаж: {{ page.stage }}</li>{% endif %}
+            {% if page.pedstage %}<li>Педагогический стаж: {{page.pedstage}}</li>{% endif %}
+            {% if page.courses %}<li>Курсы повышения квалификации: {{page.courses}}{% endif %}
+          </ul>
+        </div>
         {{ page.body }}
       </div>
     </div>

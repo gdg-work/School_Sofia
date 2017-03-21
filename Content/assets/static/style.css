@@ -95,6 +95,11 @@ div.page {
     background: #f1fbfe;
 }
 
+/* image in a paragraph (in text) */
+p img {
+    display: inline-block; padding: 5px;
+}
+
 /* contacts page: font size, color of different lines */
 .contacts {display: block; font-size: 25px; vertical-align: middle;}
 .contacts .address-line {background: #FDF9D5;}
@@ -103,13 +108,10 @@ div.page {
 /*
  * SLIDE SHOW
  * lektor makes slideshows as a sequence of 'slide' elements, one of which has 'active' flag set
+ * .slideshow-wrapper {}
+ * .slideshow {}
+ * .slideshow-inner {}
  */
-.slideshow-wrapper {}
-.slideshow {}
-.slideshow-inner {}
-.carousel.slide {}
-.carousel-indicator {}
-.carousel-inner {}
 
 .slideshow {display:block;}
 .slide {display: inline-block; border: solid 2px white; margin: 10px}

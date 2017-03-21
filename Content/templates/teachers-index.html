@@ -4,13 +4,11 @@
   {% set pages = site.query('/teachers').all() %}
   <header>
     <h1>{{ this.title }}</h1>
-    <nav>
-      <ol>
+      <ul class="w3-ul w3-hoverable">
         {% for page in pages %}
-        <li><a href="#{{ page._id }}">{{ page.name }}</a>&nbsp;— {{ page.title }};</li>
+          <li><a href="#{{ page._id }}">{{ page.name }}</a>&nbsp;— {{ page.title }};</li>
         {% endfor %}
-      </ol>
-    </nav>
+      </ul>
   </header>
   <p>
     Учитель нашей школы отличается целостным мышлением, высоким уровнем

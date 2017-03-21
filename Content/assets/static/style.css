@@ -3,20 +3,21 @@ body {
     margin: 50px 25px;
 }
 
+/*
 a {
     color: #2a99b6;
 }
 
-a:hover {
+*/
+
+.page a:hover {
     color: #33bbdf;
 }
-
 /* -------- Width ------ */
 header, footer, div.page {
     max-width: 1024px;
     margin: 0 auto;
     width: 95%;
-    background: #daeef3;
 }
 
 header {padding: 0px 0px;}
@@ -27,18 +28,18 @@ header {padding: 0px 0px;}
 header .container {
   background: url("/static/v-gradient_cyanblue.jpg") repeat-x ;
   background-size: contain;
-  height: 11em; overflow: visible;
+  height: 14em; overflow: visible;
 }
 
-.logo {
-  width: 20%; align: right; float: right;
-}
+.logo { width: 20%; float: right; }
 
 .sitetitle {
-  font-weight: bold; color:white; font-size: 36px; float: initial;
+  font-weight: bold; color:white; font-size: 48px; float: initial;
 }
 
-.header-nav {padding-top: 20px; padding-left: 10px;}
+.header-nav {w3-margin-top; w3-margin-left;}
+
+/*
 .header-nav a {
   color: navy; display: inline-block; 
   padding: 9px; border: 1px; border-color: #050302;
@@ -47,14 +48,9 @@ header .container {
   color: maroon; display: inline-block; background: #c5e4c2;
   padding: 9px; border: 1px; border-color: maroon;
 }
+*/
 
-.warning {
-  padding: 20px; /* Поля */     
-  background: #E5D3BD; /* Цвет фона */     
-  border: 2px solid #E81E25; /* Параметры рамки */
-}
-
-/* section headers */
+/* section headers, used from W3
 header h1 {
     color: #169bbd; margin: 0; font-weight: normal; font-size: 32px;
 }
@@ -78,6 +74,7 @@ header nav ul {
     margin: 0;
     padding: 0;
 }
+ */
 
 /* teachers page: photo of a teacher flows to the left */
 
@@ -89,10 +86,6 @@ header nav ul li {
     display: inline;
     margin: 0 8px 0 0;
     padding: 0;
-}
-
-div.page {
-    background: #f1fbfe;
 }
 
 /* image in a paragraph (in text) */

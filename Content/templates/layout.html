@@ -1,49 +1,70 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<link rel="stylesheet" href="{{ '/static/style.css'|url }}">
 <link rel="stylesheet" href="{{ '/static/w3.css'|url }}">
+<link rel="stylesheet" href="{{ '/static/style.css'|url }}">
 <link rel="stylesheet" href="{{ '/lb2/css/lightbox.min.css'|url }}">
+<!-- <link rel="stylesheet" href="{{ '/mdi/css/materialdesignicons.min.css'|url }}> -->
+<!-- Material design icons -->
+<link rel="stylesheet" href="http://cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css">
 <title>{% block title %}Добро пожаловать{% endblock %} — ЧОУ СОШ «София» г. Пермь</title>
 <body>
   <header>
-    <div class="container">
+    <div class="w3-container container">
       <div class="logo" ><img src="/static/sofia-emblem.svg" alt="Эмблема школы" width="100%"/></div>
       <div class="header-nav">
         <div class="sitetitle">ЧОУ СОШ «София»</div>
-      <nav>
-	<ul class="nav navbar-nav">
-	  <li{% if this._path == '/' %} class="active"{% endif %}>
-      <a href="{{ '/'|url }}">Главная</a></li>
-	  {% for href, title in [
-	    ['/about', 'О школе'],
-	    ['/news', 'Новости'],
-	    ['/history', 'История'],
-	    ['/teachers', 'Учителя'],
-	    ['/students', 'Ученики'],
-	    ['/projects', 'Проекты'],
-	    ['/traditions', 'Традиции'],
-	    ['/development', 'Программа развития'],
-	    ['/doshkolniky', 'Дошкольникам'],
-	    ['/contacts', 'Контакты'],
-	  ] %}
-	    <li{% if this.is_child_of(href) %} class="active"{% endif
-	      %}><a href="{{ href|url }}">{{ title }}</a></li>
-	  {% endfor %}
-	</ul>
-      </nav>
+          <nav>
+            {#
+          <ul class="nav navbar-nav">
+            <li{% if this._path == '/' %} class="active"{% endif %}>
+              <a href="{{ '/'|url }}">Главная</a></li>
+            {% for href, title in [
+              ['/about', 'О школе'],
+              ['/news', 'Новости'],
+              ['/history', 'История'],
+              ['/teachers', 'Учителя'],
+              ['/students', 'Ученики'],
+              ['/projects', 'Проекты'],
+              ['/traditions', 'Традиции'],
+              ['/development', 'Программа развития'],
+              ['/doshkolniky', 'Дошкольникам'],
+              ['/contacts', 'Контакты'],
+            ] %}
+              <li{% if this.is_child_of(href) %} class="active"{% endif
+                %}><a href="{{ href|url }}">{{ title }}</a></li>
+            {% endfor %}
+          </ul>
+            #}
+          <ul class="w3-bar nav navbar-nav">
+            {% for href, title in [
+              ['/', 'Главная'],
+              ['/about', 'О школе'],
+              ['/news', 'Новости'],
+              ['/history', 'История'],
+              ['/teachers', 'Учителя'],
+              ['/students', 'Ученики'],
+              ['/projects', 'Проекты'],
+              ['/traditions', 'Традиции'],
+              ['/development', 'Программа развития'],
+              ['/doshkolniky', 'Дошкольникам'],
+              ['/contacts', 'Контакты'],
+            ] %}
+              <li class='w3-button w3-blue w3-round w3-hover-teal w3-margin-top'><a href="{{ href|url }}">{{ title }}</a></li>
+            {% endfor %}
+          </ul>
+        </nav>
       </div>
     </header>
   </header>
-  <div class="page">
+  <div class="page w3-pale-blue">
     {# Ссылка на старый сайт  #}
-    <div class="warning">
-      Эта версия сайта находится в процессе постройки. <a href="http://sofia.hut1.ru">Старый сайт.</a>
+    <div class="w3-card-8 w3-yellow">
+      <p><span class="mdi mdi-worker"/>Эта версия сайта находится в процессе постройки. <a href="http://sofia.hut1.ru">Старый сайт.</a></p>
     </div>
     {% block body %}{% endblock %}
   </div>
-  <footer>
-    &copy; 2017 ЧОУ СОШ «София».  Просим при перепечатке указывать ссылку на копируемый материал.<br>
-    <div><div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+  <footer class='w3-container w3-blue' >
+    <p><a href="{{'/copyright'|url}}">&copy; 2017 ЧОУ СОШ «София»</a>.  Просим при перепечатке указывать ссылку на копируемый материал.</p>
   </footer>
 </body>
 <!-- 

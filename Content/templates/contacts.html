@@ -11,20 +11,24 @@ email: shcoolsofia@mail.ru
 {% block body %}
 <div class="contacts">
   <div class="address-line" display="block" valign="middle">
-    <span class="address-icon"><img src="/static/paper-mail.svg" width="50px" alt="Адрес"/></span>
-    <span class="address">{{ this.address }}</span>
+    <span class="mdi mdi-home">
+      <span class="address">{{ this.address }}</span>
+    </span>
   </div>
   <div class="phone-line">
-    <span class="phone-icon"><img src="/static/phone-call.svg" width="50px" alt="телефонный номер"/></span>
-    <span class="phone">{{ this.phone }}</span>
+    <span class="mdi mdi-phone-classic">
+      <span class="phone">{{ this.phone }}</span>
+    </span>
   </div>
   <div class="fax-line">
-    <span class="fax-icon"><img src="/static/fax.svg" width="50px" alt="факс"/><span>
-    <span class="fax">{{ this.fax }}</span>
+    <span class="mdi mdi-fax">
+      <span class="fax">{{ this.fax }}</span>
+    </span>
   </div>
   <div class="email-line">
-     <span class="email-icon"><img src="/static/email.svg" width="50px" alt="электропочта"/><span>
-     <span class="email"><a href='mailto:{{ this.email }}'>{{this.email}}</a></span>
+     <span class="mdi mdi-contact-mail">
+       <span class="email"><a href='mailto:{{ this.email }}'>{{this.email}}</a></span>
+     </span>
   </div>
   {% if this.email2 %}
     <div class="email"><a href='mailto:{{ this.email2 }}'>{{this.email2}}</a></div>

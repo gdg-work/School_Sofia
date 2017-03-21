@@ -3,78 +3,40 @@ body {
     margin: 50px 25px;
 }
 
-/*
-a {
-    color: #2a99b6;
-}
-
-*/
-
 .page a:hover {
     color: #33bbdf;
 }
+
 /* -------- Width ------ */
 header, footer, div.page {
     max-width: 1024px;
     margin: 0 auto;
-    width: 95%;
 }
 
 header {padding: 0px 0px;}
 .page, footer {padding: 20px 0px;}
 
+#topgrad {
+    background: url("/static/v-gradient_cyanblue.jpg") repeat-x;
+    background: -webkit-linear-gradient(blue, #ddffff); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(blue, #ddffff); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(blue, #ddffff); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(blue, #ddffff); /* Standard syntax */
+} 
+
 /* page header ("Шапка") */
 .logo .header-nav {padding: 10px;}
-header .container {
-  background: url("/static/v-gradient_cyanblue.jpg") repeat-x ;
-  background-size: contain;
-  height: 14em; overflow: visible;
-}
+/* header .container { background: topgrad; background-size: contain; } */
+
 
 .logo { width: 20%; float: right; }
 
 .sitetitle {
-  font-weight: bold; color:white; font-size: 48px; float: initial;
+  font-weight: bold; color:white; text-shadow: black 0.1em 0.1em 0.2em; font-size: 48px; /* float: initial; */
 }
 
 .header-nav {w3-margin-top; w3-margin-left;}
 
-/*
-.header-nav a {
-  color: navy; display: inline-block; 
-  padding: 9px; border: 1px; border-color: #050302;
-}
-.header-nav a:hover {
-  color: maroon; display: inline-block; background: #c5e4c2;
-  padding: 9px; border: 1px; border-color: maroon;
-}
-*/
-
-/* section headers, used from W3
-header h1 {
-    color: #169bbd; margin: 0; font-weight: normal; font-size: 32px;
-}
-
-header h2 {
-    color: #169bbd;
-    margin: 0;
-    font-weight: normal;
-    font-size: 24px;
-}
-
-header h3 {
-    color: #169bbd;
-    margin: 0;
-    font-weight: normal;
-    font-size: 18px;
-}
-
-header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
- */
 
 /* teachers page: photo of a teacher flows to the left */
 
@@ -82,11 +44,6 @@ header nav ul {
 .teacher_photo { float: left; display: inline-block; width: 20%, align:center; overflow:hide; padding: 5px;}
 .teacher_info { display:block; align=left; padding-left:20%; }
 
-header nav ul li {
-    display: inline;
-    margin: 0 8px 0 0;
-    padding: 0;
-}
 
 /* image in a paragraph (in text) */
 p img {
@@ -97,14 +54,6 @@ p img {
 .contacts {display: block; font-size: 25px; vertical-align: middle;}
 .contacts .address-line {background: #FDF9D5;}
 .contacts .fax-line {background: #FDF9D5;}
-
-/*
- * SLIDE SHOW
- * lektor makes slideshows as a sequence of 'slide' elements, one of which has 'active' flag set
- * .slideshow-wrapper {}
- * .slideshow {}
- * .slideshow-inner {}
- */
 
 .slideshow {display:block;}
 .slide {display: inline-block; border: solid 2px white; margin: 10px}

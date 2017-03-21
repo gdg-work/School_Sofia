@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, max-width=1024px">
+
 <link rel="stylesheet" href="{{ '/static/w3.css'|url }}">
 <link rel="stylesheet" href="{{ '/static/style.css'|url }}">
 <link rel="stylesheet" href="{{ '/lb2/css/lightbox.min.css'|url }}">
@@ -7,16 +9,22 @@
 <!-- Material design icons -->
 <link rel="stylesheet" href="http://cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css">
 <title>{% block title %}Добро пожаловать{% endblock %} — ЧОУ СОШ «София» г. Пермь</title>
+{% set nav_btn_classes = 'w3-button w3-blue w3-round w3-hover-teal w3-margin-top' %}
+{% set nav_btn_classes_active = nav_btn_classes + ' w3-green' %}
+{% set nav_btn_classes_passive = nav_btn_classes + ' w3-blue' %}
 <body>
   <header>
-    <div class="w3-container container">
+    <div class="w3-container container" id="topgrad">
       <div class="logo" ><img src="/static/sofia-emblem.svg" alt="Эмблема школы" width="100%"/></div>
       <div class="header-nav">
         <div class="sitetitle">ЧОУ СОШ «София»</div>
           <nav>
-            {#
-          <ul class="nav navbar-nav">
-            <li{% if this._path == '/' %} class="active"{% endif %}>
+          <ul class="w3-bar nav navbar-nav">
+            <li{% if this._path == '/' %} 
+                class="{{ nav_btn_classes_active }}"
+              {% else %}
+                class="{{ nav_btn_classes_passive }}" 
+              {% endif %}>
               <a href="{{ '/'|url }}">Главная</a></li>
             {% for href, title in [
               ['/about', 'О школе'],
@@ -30,26 +38,12 @@
               ['/doshkolniky', 'Дошкольникам'],
               ['/contacts', 'Контакты'],
             ] %}
-              <li{% if this.is_child_of(href) %} class="active"{% endif
-                %}><a href="{{ href|url }}">{{ title }}</a></li>
-            {% endfor %}
-          </ul>
-            #}
-          <ul class="w3-bar nav navbar-nav">
-            {% for href, title in [
-              ['/', 'Главная'],
-              ['/about', 'О школе'],
-              ['/news', 'Новости'],
-              ['/history', 'История'],
-              ['/teachers', 'Учителя'],
-              ['/students', 'Ученики'],
-              ['/projects', 'Проекты'],
-              ['/traditions', 'Традиции'],
-              ['/development', 'Программа развития'],
-              ['/doshkolniky', 'Дошкольникам'],
-              ['/contacts', 'Контакты'],
-            ] %}
-              <li class='w3-button w3-blue w3-round w3-hover-teal w3-margin-top'><a href="{{ href|url }}">{{ title }}</a></li>
+            <li {% if this.is_child_of(href) %}
+                   class="{{nav_btn_classes_active}}" 
+                {% else %}
+                   class="{{nav_btn_classes_passive}}" 
+                {% endif %} 
+                ><a href="{{ href|url }}">{{ title }}</a></li>
             {% endfor %}
           </ul>
         </nav>

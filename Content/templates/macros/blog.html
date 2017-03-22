@@ -10,9 +10,28 @@
   {{ post.body }}
   </div>
 
-  {% for image in post.attachments.images %}
-  <div class="image"><a href="{{image|url}}">"<img src="{{ image.thumbnail(640)|url }}"></a></div>
+
+  {# first image is rendered in big size (640p) #}
+  {#
+  {% for image in post.attachments.images.first() %}
+  <div class="image"><a href="{{image|url}}"><img src="{{ image.thumbnail(640)|url }}"></a></div>
   {% endfor %}
+  #}
+
+  {# All images are rendered as thumbnails with LightBox support #}
+  {% if post.attachments.images.all() %}
+    {% set carousel_id = 'lbox2-' ~ get_random_id() %}
+    <div class="slideshow">
+    {% for image in post.attachments.images.all() %}
+      <span class="image slide w3-image">
+        <a href="{{ image|url }}" data-lightbox="{{ carousel_id }}" data-title="{{ image|url }}">
+          <img src="{{ image.thumbnail(150)|url }}" alt="Фотография"/>
+        </a>
+      </span>
+    {% endfor %}
+    </div>
+  {% endif %}
+
 
   <div class="blog-author">
     Автор: 
@@ -25,4 +44,10 @@
   </div>
   </p>
   </div>
+  <script id="jquery" src={{ "/jq/jquery.min.js"|url }}></script>
+  <script id="sizzle" src={{ "/lb2/js/lightbox.min.js"|url }}></script>
 {% endmacro %}
+
+{#
+vim:ts=2:softtabstop=2:expandtab:shiftwidth=2
+#}

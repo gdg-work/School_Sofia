@@ -9,7 +9,7 @@ body:
  * стили [W3 Foundation](http://www.w3schools.com/w3css/), лицензия Public Domain;
  * система управления контентом [Lektor](http://www.getlektor.com), лицензия [BSD](http://raw.githubusercontent.com/lektor/lektor/master/LICENSE);
  * шрифты [Material Design Icons](http://materialdesignicons.com/), лицензия [SIL Open Font License](http://raw.githubusercontent.com/Templarian/MaterialDesign/master/license.txt);
- * фотоальбомы [FGallery](https://www.thregr.org/~wavexx/software/fgallery/);
- * библиотеки JavaScript: [JQuery](http://jquery.com/), [LightBox2](http://lokeshdhakar.com/projects/lightbox2/).
+ * фотоальбомы [FGallery](https://www.thregr.org/~wavexx/software/fgallery/), лицензия GPL v2+;
+ * библиотеки JavaScript: [JQuery](http://jquery.com/), [LightBox2](http://lokeshdhakar.com/projects/lightbox2/). Лицензии MIT.
 ---
 title: Авторские права

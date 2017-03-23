@@ -55,8 +55,10 @@ p img {
 .contacts .address-line {background: #FDF9D5;}
 .contacts .fax-line {background: #FDF9D5;}
 
-.slideshow {display:block;}
-.slide {display: inline-block; border: solid 2px white; margin: 10px}
+.blog-post {display: block; border-bottom: solid 2px blue;}
+.slideshow {display: block;}
+.slideshow > .slide {display: inline-block; border: solid 2px white; margin: 10px}
+.blog-post > .image {display: inline-block; float: left; width: 645px; margin: 5px}
 
 /* 
 vim:shiftwidth=4:expandtab:ts=4:softtabstop=4

@@ -1,51 +1,58 @@
 {% macro render_blog_post(post, from_index=false) %}
-  <div class="blog-post">
+  <div class="blog-post section w3-section w3-container">
   {% if from_index %}
     <h2><a href="{{ post|url }}">{{ post.title }}</a></h2>
   {% else %}
     <h2>{{ post.title }}</h2>
   {% endif %}
 
-  <div class="blog-body">
-  {{ post.body }}
-  </div>
-
+  {% set carousel_id = 'lbox2-' ~ get_random_id() %}
 
   {# first image is rendered in big size (640p) #}
-  {#
-  {% for image in post.attachments.images.first() %}
-  <div class="image"><a href="{{image|url}}"><img src="{{ image.thumbnail(640)|url }}"></a></div>
-  {% endfor %}
-  #}
+  {% set image = post.attachments.images.first() %}
+  {% if image %}
+  <div class="image">
+    <a href="{{image|url}}" data-lightbox="{{ carousel_id }}">
+      <img src="{{ image.thumbnail(640)|url }}"/>
+    </a>
+  </div>
+  {% endif %}
+
+  <div class="blog-body">
+    {{ post.body }}
+  </div>
 
   {# All images are rendered as thumbnails with LightBox support #}
   {% if post.attachments.images.all() %}
-    {% set carousel_id = 'lbox2-' ~ get_random_id() %}
     <div class="slideshow">
-    {% for image in post.attachments.images.all() %}
-      <span class="image slide w3-image">
-        <a href="{{ image|url }}" data-lightbox="{{ carousel_id }}" data-title="{{ image|url }}">
-          <img src="{{ image.thumbnail(150)|url }}" alt="Фотография"/>
-        </a>
-      </span>
-    {% endfor %}
+      {% for image in post.attachments.images.all() %}
+        {% if loop.first %}
+        {% else %}
+          <span class="image slide w3-image">
+            <a href="{{ image|url }}" data-lightbox="{{ carousel_id }}" data-title="{{ image|url }}">
+                <img src="{{ image.thumbnail(120)|url }}" alt="фотография"/>
+            </a>
+          </span>
+        {% endif %}
+      {% endfor %}
     </div>
+  {% else %}  {# if image.all() #}
   {% endif %}
 
-
-  <div class="blog-author">
-    Автор: 
-    {% if post.twitter_handle %}
-      <a href="https://twitter.com/{{ post.twitter_handle
-        }}">{{ post.author or post.twitter_handle }}</a>
-    {% else %}
-      {{ post.author }}
-    {% endif %}
-  </div>
-  </p>
+  {% if post.author %}
+    <div class="blog-author">
+      Автор: 
+      {% if post.twitter_handle %}
+        <a href="https://twitter.com/{{ post.twitter_handle
+          }}">{{ post.author or post.twitter_handle }}</a>
+      {% else %}
+        {{ post.author }}
+      {% endif %}
+    </div>
+  {% endif %}
   </div>
   <script id="jquery" src={{ "/jq/jquery.min.js"|url }}></script>
-  <script id="sizzle" src={{ "/lb2/js/lightbox.min.js"|url }}></script>
+  <script id="lightbox2" src={{ "/lb2/js/lightbox.min.js"|url }}></script>
 {% endmacro %}
 
 {#

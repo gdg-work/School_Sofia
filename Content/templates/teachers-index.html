@@ -6,7 +6,8 @@
     <h1>{{ this.title }}</h1>
       <ul class="w3-ul w3-hoverable">
         {% for page in pages %}
-          <li><a href="#{{ page._id }}">{{ page.name }}</a>&nbsp;— {{ page.title }};</li>
+        <li><a href="#{{ page._id }}">{{ page.personal_n }} {{
+                page.father_n }} {{ page.family_n }}</a>&nbsp;— {{ page.title }};</li>
         {% endfor %}
       </ul>
   </header>
@@ -34,7 +35,7 @@
         </div>
       </div>
       {% endif %}
-      <h3 class="teacher">{{ page.name }}</h3>
+      <h3 class="teacher">{{ page.personal_n }} {{ page.father_n }} {{ page.family_n }}</h3>
       <div class="teacher_info">
         {% if page.title %}<p>{{page.title}}</p>{% endif %}
         <div class="list">

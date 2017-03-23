@@ -2,6 +2,12 @@ _model: teachers-person
 ---
 name: Ирина Владимировна Пурмалис
 ---
+personal_n: Ирина
+---
+father_n: Владимировна
+---
+family_n: Пурмалис
+---
 title: преподаватель английского языка
 ---
 category: первая

@@ -2,6 +2,12 @@ _model: teachers-person
 ---
 name: Нина Фёдоровна Черемных
 ---
+personal_n: Нина
+---
+father_n: Фёдоровна
+---
+family_n: Черемных
+---
 title: преподаватель русского языка и литературы
 ---
 category: первая

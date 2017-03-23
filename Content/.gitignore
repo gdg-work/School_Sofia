@@ -2,3 +2,9 @@ go.sh
 \.netlify
 build/\.lektor
 build/[a-zA-Z]*
+
+assets/jq
+assets/lb2
+assets/mdi
+assets/sizzle
+bower_components

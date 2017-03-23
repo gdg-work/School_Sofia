@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+  {% set pages = site.query('/teachers').all() %}
+  <header>
+    <h1>{{ this.title }}</h1>
+      <nav>
+        <ul class="w3-ul w3-hoverable">
+          {% for page in pages %}
+            <li><a href="#{{ page._id }}">{{ page.name }}</a>&nbsp;— {{ page.title }};</li>
+          {% endfor %}
+        </ul>
+      </nav>
+  </header>
+  {% if page.starttext %}
+    <section>
+      {{ page.starttext }}
+    </section>
+  {% endif %}
+
+  {% for page in pages %}
+    <section class="w3-section" id="{{page._id}}">
+      <h2> {{ page.title }}</h2>
+      {{ page.body }}
+      {#
+      {% set image = page.attachments.images.first() %}
+      {% if image %}
+      <div class="teacher_photo">
+        <div class="image">
+          <a href="{{ image|url }}"><img src="{{ image.thumbnail(150)|url }}" alt="{{ page.title }}"/></a>
+        </div>
+      </div>
+      {% endif %}
+      #}
+    </section>
+  {% endfor %}
+{% endblock %}
+
+{#
+vim:shiftwidth=2:expandtab:ts=2:softtabstop=2
+#}

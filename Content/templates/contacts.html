@@ -10,22 +10,22 @@ email: shcoolsofia@mail.ru
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
 <div class="contacts">
-  <div class="address-line" display="block" valign="middle">
+  <div class="address-line w3-theme-l3" display="block" valign="middle">
     <span class="mdi mdi-home">
       <span class="address">{{ this.address }}</span>
     </span>
   </div>
-  <div class="phone-line">
+  <div class="phone-line w3-theme-l5" >
     <span class="mdi mdi-phone-classic">
       <span class="phone">{{ this.phone }}</span>
     </span>
   </div>
-  <div class="fax-line">
+  <div class="fax-line w3-theme-l3">
     <span class="mdi mdi-fax">
       <span class="fax">{{ this.fax }}</span>
     </span>
   </div>
-  <div class="email-line">
+  <div class="email-line w3-theme-l5">
      <span class="mdi mdi-contact-mail">
        <span class="email"><a href='mailto:{{ this.email }}'>{{this.email}}</a></span>
      </span>

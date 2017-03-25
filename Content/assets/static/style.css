@@ -16,12 +16,22 @@ header, footer, div.page {
 header {padding: 0px 0px;}
 .page, footer {padding: 20px 0px;}
 
-#topgrad {
+#topgrad_purple {
+    /* Меняется при смене темы на сайте */
     background: url("/static/v-gradient_cyanblue.jpg") repeat-x;
-    background: -webkit-linear-gradient(blue, #ddffff); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(blue, #ddffff); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(blue, #ddffff); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(blue, #ddffff); /* Standard syntax */
+    background: -webkit-linear-gradient(#3e236d, #f6f3fb); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#3e236d, #f6f3fb); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#3e236d, #f6f3fb); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#3e236d, #f6f3fb); /* Standard syntax */
+} 
+
+#topgrad_green {
+    /* Меняется при смене темы на сайте */
+    background: url("/static/v-gradient_cyanblue.jpg") repeat-x;
+    background: -webkit-linear-gradient(#005950, #e9fffd); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#005950, #e9fffd); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#005950, #e9fffd); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#005950, #e9fffd); /* Standard syntax */
 } 
 
 /* page header ("Шапка") */
@@ -32,7 +42,8 @@ header {padding: 0px 0px;}
 .logo { width: 20%; float: right; }
 
 .sitetitle {
-  font-weight: bold; color:white; text-shadow: black 0.1em 0.1em 0.2em; font-size: 48px; /* float: initial; */
+    /* Меняется при смене темы на сайте */
+    font-weight: bold; color: white; text-shadow: black 0.1em 0.1em 0.2em; font-size: 48px; /* float: initial; */
 }
 
 .header-nav {w3-margin-top; w3-margin-left;}
@@ -52,10 +63,10 @@ p img {
 
 /* contacts page: font size, color of different lines */
 .contacts {display: block; font-size: 25px; vertical-align: middle;}
-.contacts .address-line {background: #FDF9D5;}
-.contacts .fax-line {background: #FDF9D5;}
+.contacts .address-line {w3-theme-l3}
+.contacts .fax-line {background: w3-theme-l3;}
 
-.blog-post {display: block; border-bottom: solid 2px blue;}
+.blog-post {display: block; border-bottom: solid 1px green;}
 .slideshow {display: block;}
 .slideshow > .slide {display: inline-block; border: solid 2px white; margin: 10px}
 .blog-post > .image {display: inline-block; float: left; width: 645px; margin: 5px}

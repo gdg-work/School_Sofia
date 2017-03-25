@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, max-width=1024px">
 <link rel="icon" href="{{ '/static/favicon.ico'|url }}" sizes="16x16"  type="image/x-icon">
-<link rel="stylesheet" href="{{ '/static/style.css'|url }}">
 <link rel="stylesheet" href="{{ '/static/w3.css'|url }}">
+<link rel="stylesheet" href="{{ '/static/w3-theme-green.css'|url }}">
 <link rel="stylesheet" href="{{ '/static/style.css'|url }}">
 <link rel="stylesheet" href="{{ '/lb2/css/lightbox.min.css'|url }}">
 <!-- Material design icons -->
@@ -12,12 +12,12 @@
 <link rel="stylesheet" href="http://cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css">
 -->
 <title>ЧОУ СОШ «София» г. Пермь</title> 
-{% set nav_btn_classes = 'w3-button w3-blue w3-round w3-hover-teal w3-margin-top' %}
-{% set nav_btn_classes_active = nav_btn_classes + ' w3-green' %}
-{% set nav_btn_classes_passive = nav_btn_classes + ' w3-blue' %}
+{% set nav_btn_classes = 'w3-button w3-round w3-hover-theme w3-margin-top' %}
+{% set nav_btn_classes_active = nav_btn_classes + ' w3-theme-l3' %}
+{% set nav_btn_classes_passive = nav_btn_classes + ' w3-theme-d4' %}
 <body>
   <header>
-    <div class="w3-container container" id="topgrad">
+    <div class="w3-container container" id="topgrad_green">
       <div class="logo" ><img src="/static/sofia-emblem.svg" alt="Эмблема школы" width="100%"/></div>
       <div class="header-nav">
         <div class="sitetitle">Частная школа «София»</div>
@@ -53,14 +53,14 @@
       </div>
     </header>
   </header>
-  <div class="page w3-pale-blue">
+  <div class="page w3-theme-l5">
     {# Ссылка на старый сайт  #}
     <div class="w3-card-8 w3-yellow">
       <p><span class="mdi mdi-worker"/>Эта версия сайта находится в процессе постройки. <a href="http://sofia.hut1.ru">Старый сайт.</a></p>
     </div>
     {% block body %}{% endblock %}
   </div>
-  <footer class='w3-container w3-blue' >
+  <footer class='w3-container w3-theme-d4' >
     <p><a href="{{'/copyright'|url}}">&copy; 2017 ЧОУ СОШ «София»</a>.  Просим при перепечатке указывать ссылку на копируемый материал.</p>
   </footer>
 </body>

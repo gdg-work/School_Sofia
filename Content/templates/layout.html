@@ -13,8 +13,8 @@
 -->
 <title>ЧОУ СОШ «София» г. Пермь</title> 
 {% set nav_btn_classes = 'w3-button w3-round w3-hover-theme w3-margin-top' %}
-{% set nav_btn_classes_active = nav_btn_classes + ' w3-theme-l3' %}
-{% set nav_btn_classes_passive = nav_btn_classes + ' w3-theme-d4' %}
+{% set nav_btn_classes_active = nav_btn_classes + ' w3-theme-button_active' %}
+{% set nav_btn_classes_passive = nav_btn_classes + ' w3-theme-button' %}
 <body>
   <header>
     <div class="w3-container container" id="topgrad_green">
@@ -34,12 +34,13 @@
               ['/news', 'Новости'],
               ['/history', 'История'],
               ['/teachers', 'Учителя'],
-              ['/students', 'Ученики'],
+              ['/students', 'Учащиеся'],
               ['/projects', 'Проекты'],
               ['/traditions', 'Традиции'],
               ['/development', 'Программа развития'],
               ['/doshkolniky', 'Дошкольникам'],
               ['/contacts', 'Контакты'],
+              ['/QA', 'Вопрос-Ответ'],
             ] %}
             <li {% if this.is_child_of(href) %}
                    class="{{nav_btn_classes_active}}" 
@@ -55,9 +56,11 @@
   </header>
   <div class="page w3-theme-l5">
     {# Ссылка на старый сайт  #}
+    {#
     <div class="w3-card-8 w3-yellow">
       <p><span class="mdi mdi-worker"/>Эта версия сайта находится в процессе постройки. <a href="http://sofia.hut1.ru">Старый сайт.</a></p>
     </div>
+    #}
     {% block body %}{% endblock %}
   </div>
   <footer class='w3-container w3-theme-d4' >

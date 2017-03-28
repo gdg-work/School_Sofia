@@ -20,3 +20,10 @@
 .w3-hover-theme:hover {color:#fff !important; background-color:#4caf50 !important}
 .w3-hover-text-theme:hover {color:#4caf50 !important}
 .w3-hover-border-theme:hover {border-color:#4caf50 !important}
+
+.w3-theme-button {color:#fff !important; background-color:#2e6830 !important;}
+.w3-theme-button_active {color:#fff !important; background-color:#8787de !important;}
+.w3-theme-button_hover {color:#fff !important; background-color:#70708e !important;}
+
+/* -- Headers -- */
+h1, h2, h3, h4, h5 {color: #265728;}

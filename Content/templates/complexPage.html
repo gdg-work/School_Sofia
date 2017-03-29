@@ -1,39 +1,48 @@
 {% extends "layout.html" %}
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
-  {% set pages = site.query('/teachers').all() %}
   <header>
     <h1>{{ this.title }}</h1>
-      <nav>
-        <ul class="w3-ul w3-hoverable">
-          {% for page in pages %}
-            <li><a href="#{{ page._id }}">{{ page.name }}</a>&nbsp;— {{ page.title }};</li>
-          {% endfor %}
-        </ul>
-      </nav>
   </header>
-  {% if page.starttext %}
+  {% if this.starttext %}
     <section>
-      {{ page.starttext }}
+      {{ this.starttext }}
     </section>
   {% endif %}
 
-  {% for page in pages %}
+  {% for page in this.children %}
     <section class="w3-section" id="{{page._id}}">
+      {% if page.title %}
       <h2> {{ page.title }}</h2>
-      {{ page.body }}
-      {#
-      {% set image = page.attachments.images.first() %}
-      {% if image %}
-      <div class="teacher_photo">
-        <div class="image">
-          <a href="{{ image|url }}"><img src="{{ image.thumbnail(150)|url }}" alt="{{ page.title }}"/></a>
-        </div>
-      </div>
       {% endif %}
-      #}
+      {{ page.body }}
+
+      {# images #}
+
+      {# All images are rendered as thumbnails with LightBox support #}
+      {% if page.attachments.images.all() %}
+        {% set carousel_id = 'lbox2-' ~ get_random_id() %}
+        <div class="slideshow">
+          {% for image in page.attachments.images.all() %}
+            <span class="image slide w3-image">
+              <a href="{{ image|url }}" data-lightbox="{{ carousel_id }}" data-title="{{ image|url }}">
+                  <img src="{{ image.thumbnail(120)|url }}" alt="фотография"/>
+              </a>
+            </span>
+          {% endfor %}
+        </div>
+      {% else %}  {# if image.all() #}
+      {% endif %}
     </section>
-  {% endfor %}
+    {% endfor %}  {# for page in this.children #}
+
+  {% if this.endtext %}
+    <section>
+      {{ this.endtext }}
+    </section>
+  {% endif %}
+  <script id="jquery" src={{ "/jq/jquery.min.js"|url }}></script>
+  <script id="lightbox2" src={{ "/lb2/js/lightbox.min.js"|url }}></script>
 {% endblock %}
 
 {#

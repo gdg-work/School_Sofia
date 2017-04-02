@@ -10,28 +10,54 @@
 
 #}
 
-{% set full_width_blocks = ['banner', 'slideshow'] %}
-
 {% macro render_container(item, classes) %}
   <div class="container">
     <div class="row">
       <div class="{{ classes }}">
-        {{ item }}
+        {% if classes == "slide" %}
+          <img src="{{ item.image | url }}" alt="item.description"></img>
+        {% else %}
+                {{ item }}
+        {% endif %}
       </div>
     </div>
   </div>
 {% endmacro %}
 
-{% macro render_full_width_blocks(blocks, classes='col-md-8 col-md-offset-2') %}
-  {% if blocks and blocks[0]._flowblock != 'banner' and caller %}
-    {{ render_container(caller(), classes) }}
-  {% endif %}
+{% macro render_full_width_blocks(blocks, classes="") %}
   {% for blk in blocks %}
-    {% if blk._flowblock in full_width_blocks %}
-      {{ blk }}
-      {% if loop.first and caller %}{{ render_container(caller(), classes) }}{% endif %}
-    {% else %}
-      {{ render_container(blk, classes) }}
-    {% endif %}
+     {{ render_container(blk, classes) }}
   {% endfor %}
 {% endmacro %}
+
+{% macro render_blocks(post, from_index=false) %}
+  <div class="row w3-container">
+
+    {% set carousel_id = 'lbox2-' ~ get_random_id() %}
+
+    <div class="body">
+      {{ post.text }}
+    </div>
+
+    {# All images are rendered as thumbnails with LightBox support #}
+    {% if post.attachments.images.all() %}
+      <div class="slideshow">
+        {% for image in post.attachments.images.all() %}
+          <span class="image slide w3-image">
+            <a href="{{ image|url }}" data-lightbox="{{ carousel_id }}" data-title="{{ image|url }}">
+          <img src="{{ image.thumbnail(120)|url }}" alt="фотография"/>
+            </a>
+          </span>
+        {% endfor %}
+      </div>
+    {% else %}  {# if image.all() #}
+    {% endif %}
+
+  </div>
+  <script id="jquery" src={{ "/jq/jquery.min.js"|url }}></script>
+  <script id="lightbox2" src={{ "/lb2/js/lightbox.min.js"|url }}></script>
+{% endmacro %}
+
+{#
+vim:ts=2:softtabstop=2:expandtab:shiftwidth=2
+#}

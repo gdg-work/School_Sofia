@@ -2,6 +2,6 @@
 lektor="/usr/bin/lektor"
 netlify="/usr/bin/netlify"
 
-${lektor} clean -O build
-${lektor} build -O build
-${netlify} deploy -s sofia-perm -p build -t $(cat ~/.netlify/access.token)
+${lektor} clean -O ../_Build
+${lektor} build -O ../_Build
+${netlify} deploy -s sofia-perm -p ../_Build -t $(cat ~/.netlify/access.token)

@@ -25,7 +25,7 @@
         <div class="slideshow">
           {% for image in page.attachments.images.all() %}
             <span class="image slide w3-image">
-              <a href="{{ image|url }}" data-lightbox="{{ carousel_id }}" data-title="{{ image|url }}">
+              <a href="{{ image|url }}" data-lightbox="{{ carousel_id }}" data-title="{{ image.description }}">
                   <img src="{{ image.thumbnail(120)|url }}" alt="фотография"/>
               </a>
             </span>

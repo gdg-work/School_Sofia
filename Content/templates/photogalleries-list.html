@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{# Чисто декоративная замена page.html, где в качестве маркеров в списке <ul> маленький фотоаппарат.
+   Маркеры делает стилевой файл, а здесь я только вставляю нужный класс в разделе <div> 
+#}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+  <h2>{{ this.title }}</h2>
+  <div class="photolist">
+    {{ this.body }}
+  </div>
+{% endblock %}

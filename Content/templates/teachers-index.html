@@ -29,6 +29,7 @@
     <div class="section teacher" id="{{ page._id }}">
       {% set image = page.attachments.images.first() %}
       {% if image %}
+      {% set carousel_id = 'lbox2-' ~ get_random_id() %}
       <div class="teacher_photo">
         <div class="image">
           <a href="{{ image|url }}"><img src="{{ image.thumbnail(150)|url }}" alt="{{ page.title }}"/></a>
@@ -48,8 +49,30 @@
         </div>
         {{ page.body }}
       </div>
+      {# У учителей бывают сертификаты, портфолио и прочие работы. Сделаю тут для всего этого lightbox,
+         как в новостях.  // Teachers can have certificates, gratitude letters etc, lets do a lightbox
+         for this data #}
+      {# All images are rendered as thumbnails with LightBox support #}
+      {% if page.attachments.images.all() %}
+        <div class="slideshow">
+          {% for image in page.attachments.images.all() %}
+            {% if loop.first %}
+            {% else %}
+              <span class="image slide w3-image">
+                <a href="{{ image|url }}" data-lightbox="{{ carousel_id }}" data-title="Изображение">
+                    <img src="{{ image.thumbnail(100)|url }}" alt="фотография"/>
+                </a>
+              </span>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% else %}  {# if image.all() #}
+      {% endif %}
+
     </div>
   {% endfor %}
+  <script id="jquery" src={{ "/jq/jquery.min.js"|url }}></script>
+  <script id="lightbox2" src={{ "/lb2/js/lightbox.min.js"|url }}></script>
 {% endblock %}
 
 {#

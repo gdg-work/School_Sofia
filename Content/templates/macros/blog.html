@@ -5,6 +5,9 @@
   {% else %}
     <h2>{{ post.title }}</h2>
   {% endif %}
+  <div class="PubDate, w3-right-align">
+    Дата: {{ post.pub_date }}
+  </div>
 
   {% set carousel_id = 'lbox2-' ~ get_random_id() %}
 
@@ -50,6 +53,11 @@
       {% endif %}
     </div>
   {% endif %}
+
+  {# быстрый возврат в начало #}
+  <div class="ToBegin, w3-right-align">    
+    <a href="/news">К началу списка новостей</a>
+  </div>
   </div>
   <script id="jquery" src={{ "/jq/jquery.min.js"|url }}></script>
   <script id="lightbox2" src={{ "/lb2/js/lightbox.min.js"|url }}></script>

@@ -10,6 +10,8 @@
 
 #}
 
+{% set full_width_blocks = ['banner'] %}
+
 {% macro render_container(item, classes) %}
   <div class="container">
     <div class="row">
@@ -26,7 +28,12 @@
 
 {% macro render_full_width_blocks(blocks, classes="") %}
   {% for blk in blocks %}
-     {{ render_container(blk, classes) }}
+    {% if blk._flowblock in full_width_blocks %}
+      {{ blk }}
+      {% if loop.first and caller %}{{ render_container(caller(), classes) }}{% endif %}
+    {% else %}
+      {{ render_container(blk, classes) }}
+    {% endif %}
   {% endfor %}
 {% endmacro %}
 
@@ -34,7 +41,6 @@
   <div class="row w3-container">
 
     {% set carousel_id = 'lbox2-' ~ get_random_id() %}
-
     <div class="body">
       {{ post.text }}
     </div>

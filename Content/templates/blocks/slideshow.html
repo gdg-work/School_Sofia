@@ -1,26 +1,27 @@
-{% set carousel_id = 'lbox2-' ~ get_random_id() %}
 <div class="slideshow-wrapper">
-  <div class="slideshow">
-  {% for slide in this.slides.blocks %}
-    <div class="slide">
-      {% set imgname = slide.image %}
-      {% for image in record.attachments.images.all() %}
-        {% if image|url == imgname %}
-          <a href="{{ imgname }}" data-lightbox="{{ carousel_id }}" data-title="{{ slide.description }}">
-            <img src="{{ image.thumbnail(150)|url }}" alt="{{ slide.description }}"/>
-          </a>
-        {% else %}
-          <!--
-            skipped: imgurl {{imgname.url}} != image {{ image|url }}
-          -->
-        {% endif %}
+  {% set carousel_id = 'carousel-' ~ get_random_id() %}
+  <div class="Wallop Wallop--fold">
+    <div class="Wallop-list">
+      {% for slide in this.slides.blocks %}
+      <div class="Wallop-item">
+        <img src="{{ slide.image }}" width="100%">
+      </div>
       {% endfor %}
     </div>
-  {% endfor %}
+    <button class="Wallop-buttonPrevious" role="button">
+      <span class="sr-only">Предыдущее фото</span>
+    </button>
+    <button class="Wallop-buttonNext" role="button">
+      <span class="sr-only">Следующее фото</span>
+    </button>
   </div>
 </div>
 <script id="jquery" src={{ "/jq/jquery.min.js"|url }}></script>
-<script id="sizzle" src={{ "/lb2/js/lightbox.min.js"|url }}></script>
+<script id="wallop" src={{ "/wallop/js/Wallop.min.js"|url }}></script>
+<script>
+  var wallopEl = document.querySelector('.Wallop');
+  var slider = new Wallop(wallopEl);
+</script>
 {#
-vim:ts=2:softtabstop=2:expandtab:shiftwidth=2
+vim:shiftwidth=2:expandtab:ts=2:softtabstop=2
 #}

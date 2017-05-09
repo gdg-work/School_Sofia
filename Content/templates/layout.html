@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="{{ '/static/w3-theme-green.css'|url }}">
 <link rel="stylesheet" href="{{ '/static/style.css'|url }}">
 <link rel="stylesheet" href="{{ '/lb2/css/lightbox.min.css'|url }}">
+<link rel="stylesheet" href="{{ '/wallop/css/wallop.css'|url }}">
+<link rel="stylesheet" href="{{ '/wallop/css/wallop--fold.css'|url }}">
 <!-- Material design icons -->
 <link rel="stylesheet" href="{{ '/mdi/css/materialdesignicons.min.css'|url }}">
 <!--  material design, from Web
@@ -56,12 +58,6 @@
     </header>
   </header>
   <div class="page w3-theme-l5">
-    {# Ссылка на старый сайт  #}
-    {#
-    <div class="w3-card-8 w3-yellow">
-      <p><span class="mdi mdi-worker"/>Эта версия сайта находится в процессе постройки. <a href="http://sofia.hut1.ru">Старый сайт.</a></p>
-    </div>
-    #}
     {% block body %}{% endblock %}
   </div>
   <footer class='w3-container w3-theme-d4' >

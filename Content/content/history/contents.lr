@@ -52,6 +52,29 @@ text:
 -->
 ----
 class: default
+#### slideshow ####
+slides:
+
+##### slide #####
+description: Тестовый слайд
+-----
+image: 2001-1.jpg
+##### slide #####
+description: Второй снимок из 2001 года
+-----
+image: 2001-2.jpg
+##### slide #####
+description: 
+-----
+image: 2001-3.jpg
+##### slide #####
+description: 
+-----
+image: 2001-4.jpg
+##### slide #####
+description: 
+-----
+image: 2001-5.jpg
 #### text-block ####
 text:
 
@@ -60,10 +83,3 @@ text:
 Частное общеобразовательное учреждение «Средняя общеобразовательная школа „София“».
 ----
 class: default
-#### slideshow ####
-slides:
-
-##### slide #####
-description: Тестовый слайд
------
-image: 2001-3.jpg

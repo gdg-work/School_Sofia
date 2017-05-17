@@ -8,7 +8,7 @@ body:
 Еслы Вы укажете свой E-Mail адрес, Вы получите ответ на него. Если нет, ответ
 будет только опубликован на этой странице.
 
-<form action="https://formspree.io/gdg.work@gmail.com"
+<form action="https://formspree.io/school.sofia2011@gmail.com"
       method="POST">
     <input type="text" name="name" placeholder="Ваше имя" maxlength="40" required/>
     <input type="email" name="_replyto" placeholder="Ваш e-mail" maxlength="256"/><br/>

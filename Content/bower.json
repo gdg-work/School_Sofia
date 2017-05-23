@@ -18,7 +18,8 @@
   "dependencies": {
     "jquery": "~2",
     "lightbox2": "^2.9.0",
-    "mdi": "^1.8.36"
+    "mdi": "^1.8.36",
+    "wallop": "^2.4.1"
   },
   "resolutions": {
     "jquery": "^3.2.0"

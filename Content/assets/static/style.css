@@ -76,6 +76,43 @@ p img {
 .slideshow > .slide {display: inline-block; border: solid 2px white; margin: 10px}
 .blog-post > .image {display: inline-block; float: left; width: 645px; margin: 5px}
 
+.Wallop-buttonNext:before, .Wallop-buttonPrevious:before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    text-indent: 0;
+    font-size: 25px;
+    line-height: 0;
+}
+/* previous/next buttons on the slideshow */
+.Wallop-buttonPrevious {
+    before:"<";
+    border: none;
+    background: hsla(0,0%,100%,.6);
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    text-indent: -9999px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.Wallop-buttonNext {
+    before:">";
+    border: none;
+    background: hsla(0,0%,100%,.6);
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    text-indent: -9999px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 /* 
 vim:shiftwidth=4:expandtab:ts=4:softtabstop=4
  */

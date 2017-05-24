@@ -79,37 +79,41 @@ p img {
 .Wallop-buttonNext:before, .Wallop-buttonPrevious:before {
     position: absolute;
     top: 50%;
-    left: 0;
     width: 100%;
     text-align: center;
     text-indent: 0;
-    font-size: 25px;
+    text-color: hsla(0,0,100%,..5);)
+    font-size: 75px;
     line-height: 0;
 }
+
+
 /* previous/next buttons on the slideshow */
 .Wallop-buttonPrevious {
-    before:"<";
+    before:"";
     border: none;
-    background: hsla(0,0%,100%,.6);
+    background: hsla(0,0%,100%,1.0);
     width: 50px;
     height: 50px;
     border-radius: 25px;
-    text-indent: -9999px;
+    text-indent: -0px;
     position: absolute;
     top: 50%;
+    left: 0%;
     transform: translateY(-50%);
 }
 
 .Wallop-buttonNext {
-    before:">";
+    before:"";
     border: none;
-    background: hsla(0,0%,100%,.6);
+    background: hsla(0,0%,100%,1.0);
     width: 50px;
     height: 50px;
     border-radius: 25px;
-    text-indent: -9999px;
+    text-indent: -0px;
     position: absolute;
     top: 50%;
+    right: 0%;
     transform: translateY(-50%);
 }
 

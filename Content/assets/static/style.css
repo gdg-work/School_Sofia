@@ -82,8 +82,10 @@ p img {
     width: 100%;
     text-align: center;
     text-indent: 0;
+    /*
     text-color: hsla(0,0,100%,..5);)
     font-size: 75px;
+    */
     line-height: 0;
 }
 
@@ -92,11 +94,12 @@ p img {
 .Wallop-buttonPrevious {
     before:"";
     border: none;
-    background: hsla(0,0%,100%,1.0);
+    background: hsla(0,0%,100%,0.5);
     width: 50px;
     height: 50px;
     border-radius: 25px;
     text-indent: -0px;
+    font-size: 35px;
     position: absolute;
     top: 50%;
     left: 0%;
@@ -106,11 +109,12 @@ p img {
 .Wallop-buttonNext {
     before:"";
     border: none;
-    background: hsla(0,0%,100%,1.0);
+    background: hsla(0,0%,100%,0.5);
     width: 50px;
     height: 50px;
     border-radius: 25px;
     text-indent: -0px;
+    font-size: 35px;
     position: absolute;
     top: 50%;
     right: 0%;

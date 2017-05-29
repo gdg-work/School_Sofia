@@ -2,7 +2,5 @@ go.sh
 \.netlify
 build/\.lektor
 build/[a-zA-Z]*
-
 assets/sizzle
-bower_components
 ../_Build

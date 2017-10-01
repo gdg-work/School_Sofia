@@ -3,4 +3,3 @@ go.sh
 build/\.lektor
 build/[a-zA-Z]*
 assets/sizzle
-../_Build

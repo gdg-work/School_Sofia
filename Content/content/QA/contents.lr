@@ -13,6 +13,16 @@ body:
     <input type="text" name="name" placeholder="Ваше имя" maxlength="40" required/>
     <input type="email" name="_replyto" placeholder="Ваш e-mail" maxlength="256"/><br/>
     <input type="checkbox" name="publish">Публиковать ответ здесь</input><br/>
-    <textarea name="text" name="message" placeholder="Сообщение" maxlength="4096" rows="10" cols="50"></textarea><br>
+    <textarea name="text" name="message" placeholder="Сообщение" maxlength="4096" rows="10" cols="50"></textarea><br/>
+    <input type="checkbox" name="fz152" required>Согласен с обработкой моих персональных данных (см. ниже)</input><br/>
     <input type="submit" value="Отправить"/>
 </form>
+
+Также Вы можете отправить Ваш вопрос электронной почтой на адрес школы (school.sofia2011@gmail.com).
+
+Нажимая «Отправить», Вы соглашаетесь с использованием персональных данных в соответствии
+с «Политикой в области персональных данных» школы «София». 
+
+Обращаем Ваше внимание на то, что данная форма не сохраняет Ваши данные, текст сообщения или IP адрес,
+с которого Вы подключились. Аналогично не проверяется правильность имени или его соответствие адресу 
+электронной почты.

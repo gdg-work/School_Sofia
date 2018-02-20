@@ -1,3 +1,10 @@
 [project]
 name = Сайт ЧОУ СОШ «София» г. Пермь
 
+
+[packages]
+lektor-netlify = 0.1
+
+[servers.production]
+name = Production
+target = netlify://www.sofia-perm.ru

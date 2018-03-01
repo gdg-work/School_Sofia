@@ -121,6 +121,10 @@ p img {
     transform: translateY(-50%);
 }
 
+.photolist ul {
+    list-style-type: none;
+}
+
 /* 
 vim:shiftwidth=4:expandtab:ts=4:softtabstop=4
  */

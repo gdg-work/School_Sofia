@@ -11,13 +11,19 @@ body:
 <form name="q_n_a_form" method="POST" netlify>
     <p>
     <input type="text" name="name" placeholder="Ваше имя" maxlength="40" required/>
-    </p><p>
+    </p>
+    <p>
     <input type="email" name="_replyto" placeholder="Ваш e-mail" maxlength="256"/><br/>
-    </p><p>
+    </p>
+    <p>
     <input type="checkbox" name="publish">Публиковать ответ здесь</input><br/>
-    </p><p>
+    </p>
+    <p>
+    <div>
     <textarea name="text" name="message" placeholder="Сообщение" maxlength="4096" rows="10" cols="50"></textarea><br/>
     <input type="checkbox" name="fz152" required>Согласен с обработкой моих персональных данных (см. ниже)</input><br/>
+    </div>
+    <div data-netlify-recaptcha/>
   <p>
     <button type="submit">Send</button>
   </p>

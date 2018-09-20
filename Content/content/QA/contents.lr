@@ -8,7 +8,7 @@ body:
 Еслы Вы укажете свой E-Mail адрес, Вы получите ответ на него. Если нет, ответ
 будет только опубликован на этой странице.
 
-<form name="q_n_a_form" method="POST" netlify action="/QA/mail_sent/index.html>
+<form name="q_n_a_form" method="POST" netlify action="/QA/mail_sent/index.html">
     <p>
     <input type="text" name="name" placeholder="Ваше имя" maxlength="40" required/>
     </p>
